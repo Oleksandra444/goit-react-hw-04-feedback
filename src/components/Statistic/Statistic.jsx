@@ -1,11 +1,14 @@
 import { StatisticList, StatisticListItem, TotalCountWrapper, PositiveCountWrapper, TotalCountTitle, PositiveCountTitle } from "./Statistic.styled";
 import { SiBuymeacoffee} from 'react-icons/si'
 
-export const Statistic = ({ options, total, positivePercentage }) => { 
+export const Statistic = ({ good, neutral, bad, total, positivePercentage }) => { 
     return (
         <div>
-        <StatisticList>
-            {options.map(option => <StatisticListItem key={option[0]}><p>{option[0]}: <span>{ option[1]}</span></p> </StatisticListItem>)}      
+            <StatisticList>
+                <StatisticListItem ><p>good: <span>{good}</span></p> </StatisticListItem>
+                <StatisticListItem ><p>neutral: <span>{neutral}</span></p> </StatisticListItem>
+                <StatisticListItem ><p>bad: <span>{bad}</span></p> </StatisticListItem>
+                
 
             </StatisticList>
             <TotalCountWrapper>
